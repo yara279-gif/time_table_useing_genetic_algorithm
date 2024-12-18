@@ -200,3 +200,4 @@ def display_timetable(timetable):
     # Run the Tkinter loop
     root.mainloop()
 display_timetable(best_timetable)
+
