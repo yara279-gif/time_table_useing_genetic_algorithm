@@ -39,7 +39,18 @@ def create_chromosome(courses, lecturers, rooms, timeslots):
 # Initialize Population
 def create_population(pop_size, courses, lecturers, rooms, timeslots):
     return [create_chromosome(courses, lecturers, rooms, timeslots) for _ in range(pop_size)]
+"""
+    Constraints:
 
+    Hard Constraints (must be satisfied):
+        No lecturer can teach more than one class at the same time.
+        No room can host more than one class at the same time.
+        A room's capacity must meet or exceed the number of students in the course.
+        A student cannot attend two courses at the same time.
+    Soft Constraints (preferences to optimize):
+        Minimize gaps in the schedule for lecturers or students.
+
+"""
 
 # Fitness Function
 def fitness(chromosome):
